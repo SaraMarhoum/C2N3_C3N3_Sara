@@ -46,5 +46,17 @@ body{
                 
             }
         }
+        .info{
+            text-align: center;
+            background-color: rgb(224, 207, 27);
+            line-height: 33px;
+            h5{
+                color: black;
+            }
+            p{
+                color:rgb(16, 120,173) ;
+                font-weight: bold;
+            }
+        }
     }
 }

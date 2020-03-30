@@ -43,5 +43,17 @@ body header .nav_menu_header .nav_menu_header_container #nav_menu_header_bttn {
   border-radius: 6px;
   padding: 4px 25px;
 }
+body header .info {
+  text-align: center;
+  background-color: #e0cf1b;
+  line-height: 33px;
+}
+body header .info h5 {
+  color: black;
+}
+body header .info p {
+  color: #1078ad;
+  font-weight: bold;
+}
 
 /*# sourceMappingURL=style.css.map */
