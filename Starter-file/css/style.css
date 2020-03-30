@@ -1,3 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  font-size: 16px;
+}
 
+body header .nav_menu_header {
+  background-image: url("../Assets/png/Merged bar-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body header .nav_menu_header img {
+  float: left;
+  margin-left: 35px;
+}
+body header .nav_menu_header .nav_menu_header_container {
+  margin-right: 45px;
+  margin-top: 25px;
+}
+body header .nav_menu_header .nav_menu_header_container a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.15em;
+  margin-right: 69px;
+}
+body header .nav_menu_header .nav_menu_header_container .cons {
+  color: black;
+}
+body header .nav_menu_header .nav_menu_header_container .acc {
+  color: #1a519e;
+}
+body header .nav_menu_header .nav_menu_header_container #nav_menu_header_bttn {
+  color: #1a519e;
+  font-weight: bold;
+  font-size: 1.15em;
+  background-color: transparent;
+  border-color: #1a519e;
+  border-radius: 6px;
+  padding: 4px 25px;
+}
 
 /*# sourceMappingURL=style.css.map */

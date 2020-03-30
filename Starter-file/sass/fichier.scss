@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    font-size: 16px; }
+
+body{
+    header{
+        .nav_menu_header{
+            background-image: url("../Assets/png/Merged bar-1.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+                img{
+                   float: left; 
+                   margin-left: 35px;
+                }
+            .nav_menu_header_container{
+                margin-right: 45px;
+                margin-top: 25px;
+                a{
+                    text-decoration: none;
+                    font-weight: bold;
+                    font-size: 1.15em;
+                    margin-right: 69px; 
+                }
+                .cons{
+                    color: black;
+                }
+                .acc{
+                    color: rgb(26, 81, 158);
+                }
+                #nav_menu_header_bttn{
+                    color: rgb(26, 81, 158);
+                    font-weight: bold;
+                    font-size: 1.15em;
+                    background-color: transparent;
+                    border-color:rgb(26, 81, 158) ;
+                    border-radius: 6px;
+                    padding: 4px 25px;
+
+                }
+                
+            }
+        }
+    }
+}
