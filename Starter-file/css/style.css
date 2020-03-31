@@ -43,17 +43,51 @@ body header .nav_menu_header .nav_menu_header_container #nav_menu_header_bttn {
   border-radius: 6px;
   padding: 4px 25px;
 }
-body header .info {
+body header .info_header {
   text-align: center;
   background-color: #e0cf1b;
   line-height: 33px;
 }
-body header .info h5 {
+body header .info_header h5 {
   color: black;
 }
-body header .info p {
+body header .info_header p {
   color: #1078ad;
   font-weight: bold;
+}
+body header .test_header {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+body header .test_header .test_img_header {
+  background-image: url("../Assets/png/Group_80.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 587px;
+  width: 756px;
+}
+body header .test_header .test_text_header {
+  margin-top: 20px;
+  text-align: center;
+  line-height: 27px;
+  font-size: 2em;
+}
+body header .test_header .test_text_header .test_text_1_header {
+  color: #1078ad;
+  font-weight: bold;
+}
+body header .test_header .test_text_header .test_text_2_header {
+  color: #7f7f7f;
+  font-weight: bold;
+}
+body header .test_header .test_text_header #test_text_button_header {
+  width: 390px;
+  height: 30px;
+  background-color: #1078ad;
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
 }
 
 /*# sourceMappingURL=style.css.map */
