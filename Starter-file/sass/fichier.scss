@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Cairo', sans-serif;
     font-size: 16px; }
 
 body{
@@ -67,28 +67,34 @@ body{
                 background-repeat: no-repeat;
                 background-size: 100%;
                 height: 587px;
-                width: 756px; 
+                width: 681px;
             }
             .test_text_header{
                 margin-top: 20px;
                 text-align: center;
-                line-height: 27px;
-                font-size: 2em;
+                line-height: 40px;
                 .test_text_1_header{
                     color:rgb(16, 120,173) ;
                     font-weight: bold;
+                    font-size: 2em;
+                }
+                .test_text_1_img_header{
+                    margin-top: 25px;
                 }
                 .test_text_2_header{
                     color: rgb(127, 127, 127);
                     font-weight: bold;
+                    font-size: 2em;
                 }
                 #test_text_button_header{
-                    width: 390px;
-                    height: 30px;
+                    width: 645px;
+                    height: 58px;
                     background-color:rgb(16, 120,173) ;
                     color: white;
                     font-weight: bold;
                     border-radius: 4px;
+                    font-size: 2em;
+                    margin-top: 18px;
 
                 }
             }
