@@ -14,9 +14,11 @@ body{
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            height: 92px;
                 img{
                    float: left; 
                    margin-left: 35px;
+                   margin-top: 5px;
                 }
             .nav_menu_header_container{
                 margin-right: 45px;
@@ -31,16 +33,23 @@ body{
                     color: black;
                 }
                 .acc{
-                    color: rgb(26, 81, 158);
+                    color: #1A519E;
                 }
                 #nav_menu_header_bttn{
-                    color: rgb(26, 81, 158);
+                    color: #1A519E;
                     font-weight: bold;
                     font-size: 1.15em;
                     background-color: transparent;
-                    border-color:rgb(26, 81, 158) ;
-                    border-radius: 6px;
-                    padding: 4px 25px;
+                    border-color:#1A519E ;
+                    border-radius: 10px;
+                    padding: 0 8px 2px 17px;
+                    img{
+                        width: 21px;
+                        height: 20px;
+                        float: right;
+                        margin-left: 20px;
+                        margin-top: 9px;
+                    }
 
                 }
                 
@@ -48,13 +57,16 @@ body{
         }
         .info_header{
             text-align: center;
-            background-color: rgb(224, 207, 27);
-            line-height: 33px;
+            background-color:#F4CF1B;
+            line-height: 29px;
+            height: 117px;
             h5{
                 color: black;
+                font-weight: bold;
+                
             }
             p{
-                color:rgb(16, 120,173) ;
+                color:#1078AD ;
                 font-weight: bold;
             }
         }
@@ -66,30 +78,30 @@ body{
                 background-image: url("../Assets/png/Group_80.png");
                 background-repeat: no-repeat;
                 background-size: 100%;
-                height: 587px;
-                width: 681px;
+                height: 488px;
+                width: 661px;
             }
             .test_text_header{
                 margin-top: 20px;
                 text-align: center;
                 line-height: 40px;
                 .test_text_1_header{
-                    color:rgb(16, 120,173) ;
+                    color:#1078AD;
                     font-weight: bold;
-                    font-size: 2em;
+                    font-size: 1.88vw;
                 }
                 .test_text_1_img_header{
                     margin-top: 25px;
                 }
                 .test_text_2_header{
-                    color: rgb(127, 127, 127);
+                    color:#7F7F7F;
                     font-weight: bold;
-                    font-size: 2em;
+                    font-size: 1.88vw;
                 }
                 #test_text_button_header{
-                    width: 645px;
-                    height: 58px;
-                    background-color:rgb(16, 120,173) ;
+                    width: 100%;
+                    height: 60px;
+                    background-color:#1078AD ;
                     color: white;
                     font-weight: bold;
                     border-radius: 4px;
