@@ -68,6 +68,7 @@ body header .info_header p {
 }
 body header .test_header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   margin-top: 30px;
 }
@@ -86,7 +87,7 @@ body header .test_header .test_text_header {
 body header .test_header .test_text_header .test_text_1_header {
   color: #1078AD;
   font-weight: bold;
-  font-size: 1.88vw;
+  font-size: 1.875em;
 }
 body header .test_header .test_text_header .test_text_1_img_header {
   margin-top: 25px;
@@ -94,7 +95,7 @@ body header .test_header .test_text_header .test_text_1_img_header {
 body header .test_header .test_text_header .test_text_2_header {
   color: #7F7F7F;
   font-weight: bold;
-  font-size: 1.88vw;
+  font-size: 1.875em;
 }
 body header .test_header .test_text_header #test_text_button_header {
   width: 100%;
@@ -120,9 +121,10 @@ body .main_1 .main_1_container_1 {
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: center;
   font-weight: 600;
   margin-top: 36px;
-  margin-left: 533px;
+  margin-left: 90px;
 }
 body .main_1 .main_1_container_1 .main_1_item1 p {
   font-size: 2.0625em;
@@ -141,8 +143,9 @@ body .main_1 .main_1_container_2 {
   flex-direction: row;
   flex-wrap: wrap;
   text-align: center;
+  justify-content: center;
   font-weight: 600;
-  margin-left: 496px;
+  margin-left: 16px;
 }
 body .main_1 .main_1_container_2 .main_1_item3 p {
   font-size: 2.0625em;
@@ -157,6 +160,59 @@ body .main_1 .main_1_container_2 .main_1_item4 p {
   font-size: 2.0625em;
   line-height: 24px;
   margin-top: 19px;
+}
+body .main_2 {
+  margin-top: 130px;
+}
+body .main_2 .main_2_darkBlue {
+  background-color: #1078AD;
+}
+body .main_2 .main_2_darkBlue .main_2_darkBlue_title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.1875em;
+  color: #D0E5F0;
+}
+body .main_2 .main_2_darkBlue .main_2_darkBlue_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item1 {
+  margin-left: 84px;
+}
+body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item1 .main_2_darkBlue_item1_text1 {
+  color: black;
+  font-size: 1.875em;
+  font-weight: 600;
+}
+body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item1 .main_2_darkBlue_item1_text2 {
+  color: white;
+  font-size: 1.875em;
+  font-weight: 600;
+}
+body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item2 {
+  padding-left: 298px;
+  padding-top: 44px;
+}
+body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item2 .main_2_darkBlue_contact_text {
+  color: #F4CF1B;
+  font-size: 1.937em;
+  font-weight: 700;
+  text-align: center;
+}
+body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item2 .main_2_darkBlue_contact_phone {
+  background-color: #F4CF1B;
+  color: #1078AD;
+  font-size: 1.875em;
+  text-align: center;
+  margin-top: 16px;
+  font-weight: 600;
+}
+body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item2 .main_2_darkBlue_contact_mail {
+  color: white;
+  font-size: 1.687em;
+  line-height: 90px;
 }
 
 /*# sourceMappingURL=style.css.map */
