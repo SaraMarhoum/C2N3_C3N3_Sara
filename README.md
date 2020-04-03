@@ -1,6 +1,4 @@
-# Projet Validation :  C2N3_C3N3
-
-https://saramarhoum.github.io/C2N3_C3N3_Sara/. 
+# Projet Validation :  C2N3_C3N3 
 
 ## Contexte pédagogique  👋
 
