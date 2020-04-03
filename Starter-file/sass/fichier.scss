@@ -5,6 +5,9 @@
     font-family: 'Cairo', sans-serif;
     font-size: 16px; }
 
+$blueText:#1A519E;
+$lightBlueText: #1078AD;
+
 body{
     header{
         .nav_menu_header{
@@ -33,14 +36,14 @@ body{
                     color: black;
                 }
                 .acc{
-                    color: #1A519E;
+                    color: $blueText;
                 }
                 #nav_menu_header_bttn{
-                    color: #1A519E;
+                    color: $blueText;
                     font-weight: bold;
                     font-size: 1.15em;
                     background-color: transparent;
-                    border-color:#1A519E ;
+                    border-color:$blueText ;
                     border-radius: 10px;
                     padding: 0 8px 2px 17px;
                     img{
@@ -66,7 +69,7 @@ body{
                 
             }
             p{
-                color:#1078AD ;
+                color:$lightBlueText ;
                 font-weight: bold;
             }
         }
@@ -86,7 +89,7 @@ body{
                 text-align: center;
                 line-height: 40px;
                 .test_text_1_header{
-                    color:#1078AD;
+                    color:$lightBlueText;
                     font-weight: bold;
                     font-size: 1.88vw;
                 }
@@ -101,13 +104,69 @@ body{
                 #test_text_button_header{
                     width: 100%;
                     height: 60px;
-                    background-color:#1078AD ;
+                    background-color:$lightBlueText ;
                     color: white;
                     font-weight: bold;
                     border-radius: 4px;
                     font-size: 2em;
                     margin-top: 18px;
 
+                }
+            }
+        }
+    }
+    .main_1{
+        margin-top: 75px;
+        .main_1_title{
+            text-align: center;
+            font-weight: 700;
+            font-size: 2.1875em;
+            color: $lightBlueText;
+        }
+        .main_1_container_1{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            font-weight: 600;
+            margin-top: 36px;
+            margin-left: 533px;
+            .main_1_item1{
+                p{
+                    font-size: 2.0625em;
+                }
+            }
+            .main_1_item2{
+                padding-left: 217px;
+                margin-top: 23px;
+                p{
+                    font-size: 2.0625em;
+                    line-height: 24px;
+                    margin-top: 19px;
+                }
+            }
+        }
+        .main_1_container_2{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            text-align: center;
+            font-weight: 600;
+            margin-left: 496px;
+            .main_1_item3{
+                p{
+                    font-size: 2.0625em;
+                    line-height: 24px;
+                    margin-top: 29px;
+                }
+            }
+            .main_1_item4{
+                padding-left: 209px;
+                margin-top: 23px;
+                p{
+                    font-size: 2.0625em;
+                    line-height: 24px;
+                    margin-top: 19px;
                 }
             }
         }

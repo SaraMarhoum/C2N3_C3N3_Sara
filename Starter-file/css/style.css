@@ -106,5 +106,57 @@ body header .test_header .test_text_header #test_text_button_header {
   font-size: 2em;
   margin-top: 18px;
 }
+body .main_1 {
+  margin-top: 75px;
+}
+body .main_1 .main_1_title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.1875em;
+  color: #1078AD;
+}
+body .main_1 .main_1_container_1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 36px;
+  margin-left: 533px;
+}
+body .main_1 .main_1_container_1 .main_1_item1 p {
+  font-size: 2.0625em;
+}
+body .main_1 .main_1_container_1 .main_1_item2 {
+  padding-left: 217px;
+  margin-top: 23px;
+}
+body .main_1 .main_1_container_1 .main_1_item2 p {
+  font-size: 2.0625em;
+  line-height: 24px;
+  margin-top: 19px;
+}
+body .main_1 .main_1_container_2 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  font-weight: 600;
+  margin-left: 496px;
+}
+body .main_1 .main_1_container_2 .main_1_item3 p {
+  font-size: 2.0625em;
+  line-height: 24px;
+  margin-top: 29px;
+}
+body .main_1 .main_1_container_2 .main_1_item4 {
+  padding-left: 209px;
+  margin-top: 23px;
+}
+body .main_1 .main_1_container_2 .main_1_item4 p {
+  font-size: 2.0625em;
+  line-height: 24px;
+  margin-top: 19px;
+}
 
 /*# sourceMappingURL=style.css.map */
