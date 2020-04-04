@@ -103,7 +103,7 @@ body header .test_header .test_text_header #test_text_button_header {
   background-color: #1078AD;
   color: white;
   font-weight: bold;
-  border-radius: 4px;
+  border-radius: 7px;
   font-size: 2em;
   margin-top: 18px;
 }
@@ -166,6 +166,7 @@ body .main_2 {
 }
 body .main_2 .main_2_darkBlue {
   background-color: #1078AD;
+  height: 467px;
 }
 body .main_2 .main_2_darkBlue .main_2_darkBlue_title {
   text-align: center;
@@ -180,6 +181,7 @@ body .main_2 .main_2_darkBlue .main_2_darkBlue_container {
 }
 body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item1 {
   margin-left: 84px;
+  line-height: 48px;
 }
 body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item1 .main_2_darkBlue_item1_text1 {
   color: black;
@@ -207,12 +209,48 @@ body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item2 
   font-size: 1.875em;
   text-align: center;
   margin-top: 16px;
-  font-weight: 600;
+  font-weight: 700;
+  height: 78px;
+  padding-top: 22px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 body .main_2 .main_2_darkBlue .main_2_darkBlue_container .main_2_darkBlue_item2 .main_2_darkBlue_contact_mail {
   color: white;
   font-size: 1.687em;
   line-height: 90px;
+  text-decoration-color: #F4CF1B;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body .main_2 .main_2_lightBlue_container {
+  background-color: #96C5DC;
+  height: 261px;
+}
+body .main_2 .main_2_lightBlue_container .main_2_lightBlue_text {
+  color: #1078AD;
+  font-size: 1.875em;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 10px;
+}
+body .main_2 .main_2_lightBlue_container .main_2_lightBlue_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+body .main_2 .main_2_lightBlue_container .main_2_lightBlue_buttn {
+  width: 40%;
+  height: 69px;
+  background-color: #1078AD;
+  color: white;
+  font-weight: bold;
+  border-radius: 7px;
+  font-size: 2.312em;
+  margin-top: 18px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /*# sourceMappingURL=style.css.map */
