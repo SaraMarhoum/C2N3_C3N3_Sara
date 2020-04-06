@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Cairo', sans-serif;
+    font-size: 16px;
+  }
+
+main{
+  .main_advice{
+    color: #1078ad;
+text-align: center;
+    .main_advice_title{
+      text-align: center;
+      font-weight: 700;
+      font-size: 1.9em;
+      color: $lightBlueText;
+    }
+    .main_advice_container{
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 35px;
+      margin-right: 159px;
+      margin-left: 150px;
+      .main_advice_item{
+        .main_advice_img--marg{
+          width: 144px;
+          margin-top: 30px;
+        }
+        margin-bottom: 3%;
+        width: 30%;
+        img{
+          width: 100px;
+        }
+        p{
+          font-size: 1.125em;
+          font-weight: 700;
+          line-height: 1.7;
+          margin: 5% 0;
+        }
+      }
+      .main_advice_item__house{
+        width: 100%;
+      } 
+    }
+  }
+      
+}

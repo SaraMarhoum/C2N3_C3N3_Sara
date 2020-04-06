@@ -4,29 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Exo+2&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
 <body>
-    <header>
-        <div class="nav_menu_header">
-            <a href="#"><img src="Design/Assets/png/logo__sante-1.png"> </a>
-            <div class="nav_menu_header_container">
-                <a href="#" class="cons">Conseil</a>
-                <a href="#" class="acc">Accueil</a>
-                <button id="nav_menu_header_bttn">عربي<img src="Design/Assets/SVG/globe.svg"></button>
-            </div>
-        </div>
-        <div class="info_header">
-            <h5>LA DERNIÈRE INFO MÉDICALE</h5>
-            <p>La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur<br>
-            d'aggravation de l'infection. En cas de fièvre, prenez du paracétamol.<br>
-            N'arrêtez pas votre traitement ! Consultez votre médecin ou votre pharmacien.</p>
-        </div>
 
+    <!-- Header -->
+    <header class="header">
+        
+    </header>
+
+    <section class="headertest">
         <div class="test_header">
-
             <div class="test_img_header">
             </div>
 
@@ -42,7 +33,9 @@
             <button id="test_text_button_header">Demarer le test</button>
             </div>
         </div>
-    </header>
+    </section>
+
+    <!-- Main 1 -->
 
     <section class="main_1">
         <p class="main_1_title">Quels sont les symptômes à surveiller ?</p>
@@ -67,6 +60,7 @@
             </div>
         </div>
 
+    <!-- Main 2     -->
     </section>
     <section class="main_2">
         <div class="main_2_darkBlue">
@@ -94,7 +88,8 @@
             <button class="main_2_lightBlue_buttn">Demarer le test</button>
         </div>
     </section>
-
+    
+    <!-- Footer -->
     <footer>
         <img src="Design/Assets/png/logo__sante.png" alt="" class="footer_logo_sante">
         <div class="footer_container">
@@ -121,4 +116,9 @@
     </footer>
 
 </body>
+<script>
+    $(document).ready(function () {
+      $('header').load("Hero/header.html");
+    });
+  </script>
 </html>
