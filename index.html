@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
+
 <body>
 
     <!-- Header -->
@@ -91,35 +92,27 @@
     </section>
     
     <!-- Footer -->
-    <footer>
-        <img src="Design/Assets/png/logo__sante.png" alt="" class="footer_logo_sante">
-        <div class="footer_container">
-            <div class="nav_menu_footer_item1">
-                <button id="nav_menu_footer_bttn">عربي<img src="Design/Assets/SVG/globe.svg"></button><br><br>
-                <a href="#" class="nav_menu_footer_link_blue">Accueil</a><br><br>
-                <a href="#" class="nav_menu_footer_link_black">Conseil</a>
-            </div>
-            <div class="contact_footer_item2">
-                <p class="contact_footer_title">Contacts utiles</p>
-                <p class="contact_footer_text">Chiffres économiques "Alo épidémie vigilance"</p>
-                <p class="contact_footer_num">080 100 47 47</p>
-                <p class="contact_footer_text">Aide médicale urgente</p>
-                <p class="contact_footer_num">114</p>
-            </div>
-            <div class="text_footer_item3">
-                <p>Algorithme d'orientation mis à jour sur les recommandations en vigueur<br> 
-                au 22/03/2020 à 16h15.  Ce site d’information n’est pas un dispositif médical,<br> 
-                il ne délivre pas d’avis médical. Projet solidaire d'urgence,financé par l’Alliance<br> 
-                Digitale contre le COVID-19 : @maladiecovid19</p>
-            </div>
+    <footer class="footer">
+        <div class="footer_recommmandation">
         </div>
-        <div class="footer_empty"></div>
+        <div class="footer_contacte">
+        </div>
     </footer>
 
 </body>
 <script>
     $(document).ready(function () {
       $('header').load("Hero/header.html");
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.footer_recommmandation').load("Hero/footer1.html");
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.footer_contacte').load("Hero/footer2.html");
     });
   </script>
 </html>
