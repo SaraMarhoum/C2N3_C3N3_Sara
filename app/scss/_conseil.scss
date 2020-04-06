@@ -84,5 +84,35 @@ main{
       }
     }
   }
+  .main_symp{
+    .main_symp_title{
+      text-align: center;
+      font-weight: 700;
+      font-size: 2.1875em;
+      color: $lightBlueText;
+      margin-top: 123px;
+    }
+    .main_symp2_container{
+      display: flex;
+      justify-content: space-around;
+      margin-top: 85px;
+      margin-left: 256px;
+      margin-right: 298px;
+      text-align: center;
+      .main_symptome{
+        img{
+          width: 138px;
+        }
+        .main_symptome--parag{
+          color: $blueText;
+          font-size: 1.625em;
+          font-weight: 700;
+          padding-top: 32px;
+          line-height: 45px;
+        }
+      }
+    }
+  }
       
 }
+
