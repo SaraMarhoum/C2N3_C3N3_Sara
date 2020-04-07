@@ -1,0 +1,112 @@
+body{
+    main{
+        margin-bottom: -88px;
+        .test_position{
+            .test_position_container{
+                display: flex;
+                max-width: 40%;
+                justify-content: space-between;
+                margin: auto;
+                margin-top: 35px;
+                margin-bottom: 35px;
+                color: $lightBlueText;
+                font-weight: 700;
+                .test_position_text{
+                    padding-top: 5px;
+                }
+                .test_position_1{
+                    .dot_1{
+                    margin: auto;
+                    margin-top: auto;
+                    margin-top: auto;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $lightBlueBackground;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .dot_1_1{
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 50%;
+                        background-color: $yellow;
+                    }
+                    }
+                }
+                .dot_2{
+                    margin: auto;
+                    margin-top: auto;
+                    margin-top: auto;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .dot_2_2{
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    background-color: $lightBlueText;
+                    }
+                }
+                .dot_3{
+                    margin: auto;
+                    margin-top: auto;
+                    margin-top: auto;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    .dot_3_3{
+                    width: 22px;
+                    height: 22px;
+                    border-radius: 50%;
+                    background-color: $lightBlueText;
+                    }
+                }
+            }
+        }
+        .Préambule{
+            display: block;
+            .préambule_text{
+                background-color: $lightBlueBackground;
+                width: 70%;
+                margin: auto;
+                text-align: center;
+                padding: 20px;
+                border-radius: 10px;
+                h1{
+                    color: $lightBlueText;
+                    font-size: 1.8em;
+                }
+                p{
+                    font-weight: 600;
+                    font-size: 1.1em;
+                    line-height: 35px;
+                }
+                .préambule_ligne{
+                    border-bottom: 3px solid #f4cf1b;
+                    width: 240px;
+                    margin: auto;
+                }
+            }
+            .préambule_btn{
+                width: 20%;
+                height: 50px;
+                border: none;
+                border-radius: 10px;
+                background-color: $lightBlueText;
+                color: white;
+                font-size: larger;
+                margin-left: auto;
+                margin-right: auto;
+                display: block;
+                font-weight: 700;
+            }
+        }
+    }
+}

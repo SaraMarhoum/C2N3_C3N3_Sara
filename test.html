@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Exo+2&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="src/css/normalize.css">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+
+<body>
+  
+  <!-- Header -->
+  <header class="header">
+  </header>
+
+  <main>
+    <section class="test_position">
+
+      <div class="test_position_container">
+        <div class="test_position_1">
+            <div class="dot_1">
+                <div class="dot_1_1">
+                </div>
+            </div>
+            <div class="test_position_text">
+                <p>Informations</p>
+            </div>
+        </div>
+        <div class="test_position_2">
+            <div class="dot_2">
+                <div class="dot_2_2">
+
+                </div>
+            </div>
+            <div class="test_position_text">
+                <p>Questionnaire</p>
+            </div>
+        </div>
+        <div class="test_position_3">
+            <div class="dot_3">
+                <div class="dot_3_3">
+
+                </div>
+            </div>
+            <div class="test_position_text">
+                <p>Résultats</p>
+            </div>
+        </div>
+        
+    </div>
+
+    </section>
+
+    <section class="Préambule">
+      <div class="préambule_text">
+        <h1>Préambule</h1>
+        <p>L'application est fournie à titre gratuit, en l'état, uniquement à des fins d'information pour contribuer à fluidifier
+          la prise en charge des personnes par les services d'urgences pendant l'épidémie de Coronavirus CVID-19. L'exhausitivité, l'éxactitude, 
+          le caractère à jour des informations et contenus mis à disposition dans cette application, ou leur adéquation à des finalités 
+          particulières, ne sont pas garantis.
+        </p><br>
+        <div class="préambule_ligne"></div><br>
+        <p> Cette application ne substitue pas votre médecin qui est plus apte à vous donner plus de précision.<br>
+          Les informations de cette application est le premier niveau de la détéction des cas possibles du COVID-19.
+        </p>
+      </div><br><br>
+      <button class="préambule_btn">Démarrer le test</button>
+    </section>
+
+    
+    
+  </main>
+
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer_recommmandation">
+    </div>
+    <div class="footer_contacte">
+    </div>
+</footer>
+
+</body>
+
+<script>
+    $(document).ready(function () {
+      $('header').load("Hero/header.html");
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.footer_recommmandation').load("Hero/footer1.html");
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.footer_contacte').load("Hero/footer2.html");
+    });
+  </script>
+
+</html>
