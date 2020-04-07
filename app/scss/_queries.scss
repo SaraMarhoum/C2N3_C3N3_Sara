@@ -265,3 +265,90 @@
         }
     }
   }
+
+  @media only screen and (max-width: 1070px){
+    body{
+      main{
+        .main_advice{
+          .main_advice_title{
+            font-size: $px18;
+          }
+          .main_advice_container{
+            margin-left: 0;
+            margin-right: 0;
+            .main_advice_item{
+              width: 50%;
+              .main_advice_img--marg{
+                width: 94px;
+              }
+              img{
+                width: 70px;
+              }
+              p{
+                font-size: 0.8125em;
+                color: black;
+              }
+            }
+            .main_advice_item__caugh{
+              img{
+                width: 87px;
+                margin-right: 35px;
+              }
+            }
+            .main_advice_item__house{
+              width: 100%;
+            } 
+          }
+        }
+  
+        .main_info{
+          .main_info_text{
+            line-height: 26px;
+            .main_info_title{
+              font-size: $px18;
+            }
+            .main_info_p{
+              font-size: 0.8125em;
+              padding-top: 13px;
+            }
+          }
+          .main_info_link{
+            a{
+              font-size: 0.8125em;
+            }
+          }
+          .main_info_link1{
+            a{
+              padding: 10px 15px;
+            }
+          }
+          .main_info_link2{
+            a{
+              padding: 10px 42px;
+            }
+          }
+        }
+        .main_symp{
+          .main_symp_title{
+            font-size: 1.25em;
+            margin: 80px 90px auto 90px;
+          }
+          .main_symp2_container{
+            margin-left: 0;
+            margin-right: 0;
+            margin-top: 33px;
+            .main_symptome{
+              img{
+                width: 66px;
+              }
+              .main_symptome--parag{
+                font-size: 0.8125em;
+                line-height: 25px;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+  }
