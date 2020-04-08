@@ -352,3 +352,31 @@
     }
   
   }
+
+
+@media only screen and (max-width: 690px){
+    body{
+        main{
+        .test_position{
+                .test_position_container{
+                    max-width:77%;
+                    .test_position_text{
+                        p{
+                            font-size: 0.95em;
+                        }
+                        
+                    }
+                }
+        }
+        .Préambule{
+            .préambule_text{
+                width: 80%;
+            }
+            .préambule_btn{
+                width: 75%;
+            }
+        }
+        }
+    }
+}
+
