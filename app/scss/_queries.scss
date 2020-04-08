@@ -380,3 +380,22 @@
     }
 }
 
+
+// not-found
+@media only screen and (max-width: 900px){
+    body{
+        .not-found_main{
+            img{
+                width: 77%;
+            }
+            p{
+                font-size: 8vw;
+            }
+            button{
+                font-size: 4vw;
+                width: 42%;
+            }
+        }
+    }
+}
+

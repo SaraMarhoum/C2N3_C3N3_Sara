@@ -1,0 +1,29 @@
+body{
+    .not-found_main{
+        text-align: center;
+        padding-top: 72px;
+        padding-bottom: 20px;
+        img{
+            width: 50%;
+        }
+        p{
+            font-size: 4vw;
+            font-weight: 700;
+            color: $lightBlueText;
+            padding-top: 31px;
+            padding-bottom: 60px;
+        }
+        button{
+            background-color: $lightBlueText;
+            color: white;
+            font-size: 2.35vw;
+            font-weight: 700;
+            width: 27%;
+            padding: 10px;
+            border-radius: 7px;
+        }
+    }
+}
+
+@import "queries";
+
