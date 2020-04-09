@@ -79,7 +79,6 @@
                 }
             }
             .info_header{
-                height: 185px;
                 margin-top: 80px;
                 h5{
                     color: $lightBlueText;
@@ -267,6 +266,8 @@
     }
   }
 
+
+//   Advice page
   @media only screen and (max-width: 1070px){
     body{
       main{
@@ -338,6 +339,7 @@
             margin-left: 0;
             margin-right: 0;
             margin-top: 33px;
+            padding-bottom: 32px;
             .main_symptome{
               img{
                 width: 66px;
