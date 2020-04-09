@@ -25,13 +25,16 @@
 body{
     header{
         .nav_menu_header{
-            background-image: url("../../Design/Assets/png/Merged bar-1.png");
+            background-image: url("../../Design/Assets/png/background-navbar.jpg");
             background-repeat: no-repeat;
             background-size: cover;
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             height: 92px;
+            position: fixed;
+            top: 0;
+            width: 100%;
                 img{
                     float: left; 
                     margin-left: 35px;
@@ -76,6 +79,7 @@ body{
                 background-color:$yellow;  
                 line-height: 29px;
                 height: 117px;
+                margin-top: 92px;
                 h5{
                     color: black;
                     font-weight: bold;
