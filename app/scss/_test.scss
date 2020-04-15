@@ -2,7 +2,7 @@ body{
     main{
         margin-bottom: -88px;
         .test_position{
-            .test_position_container{
+            .test_position_container_1{
                 display: flex;
                 max-width: 40%;
                 justify-content: space-between;
@@ -109,6 +109,75 @@ body{
         }
     }
 
+    //position container for questions
+    .test_position_questions{
+        .test_position_container_2{
+        display: flex;
+        max-width: 40%;
+        justify-content: space-between;
+        margin: auto;
+        margin-top: 135px;
+        font-weight: 700;
+        .test_position_text{
+            padding-top: 5px;
+        }
+        .test_position_1{
+            .dot_1{
+                margin: auto;
+                margin-top: auto;
+                margin-top: auto;
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            .dot_1_1{
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $lightBlueText;
+            }
+            }
+        }
+        .dot_2{
+            margin: auto;
+                    margin-top: auto;
+                    margin-top: auto;
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $lightBlueBackground;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+            .dot_2_2{
+                width: 15px;
+                height: 15px;
+                border-radius: 50%;
+                background-color: $yellow;
+        }}
+        .dot_3{
+            margin: auto;
+            margin-top: auto;
+            margin-top: auto;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .dot_3_3{
+            width: 15px;
+            height: 15px;
+            border-radius: 50%;
+            background-color: $lightBlueText;
+            }
+        }
+    }}
+    }
+    
+    
     // Time Line
 
     .time_line{
@@ -119,7 +188,7 @@ body{
             height: 15px;
             background-color: $lightBlueBackground;
             border-radius: 20px;
-            margin-top: 83px;
+            margin-top: 51px;
             #line{
                 height: 15px;
                 background-color: $lightBlueText;
@@ -143,7 +212,6 @@ body{
         h1{
             color: $testgrey;
             text-align: center;
-            padding-top: 135px;
         }
         #inputButton{
             display: flex;
@@ -194,7 +262,7 @@ body{
             margin-top: 37px;
         }
     }
-}
+
 
 
 

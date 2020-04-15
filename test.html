@@ -17,12 +17,13 @@
   <header class="header">
   </header>
 
-  <main id="préambule">
-    <section class="test_position">
-
-      <div class="test_position_container">
+<main id="préambule">
+  
+  <!-- container for position préambule -->
+    <section id="test_position" class="test_position">
+      <div class="test_position_container_1">
         <div class="test_position_1">
-            <div class="dot_1">
+            <div id="dot_1" class="dot_1">
                 <div class="dot_1_1">
                 </div>
             </div>
@@ -31,7 +32,7 @@
             </div>
         </div>
         <div class="test_position_2">
-            <div class="dot_2">
+            <div id="dot_2" class="dot_2">
                 <div class="dot_2_2">
 
                 </div>
@@ -41,7 +42,7 @@
             </div>
         </div>
         <div class="test_position_3">
-            <div class="dot_3">
+            <div id="dot_3" class="dot_3">
                 <div class="dot_3_3">
 
                 </div>
@@ -71,9 +72,44 @@
       <button class="préambule_btn" onclick="displayQu()">Démarrer le test</button><br><br><br>
     </section>
     
-  </main>
+</main>
 
 
+<!-- container for position questions -->
+<section id="test_position_questions" class="test_position_questions" style="display: none;">
+  <div  class="test_position_container_2">
+    <div class="test_position_1">
+        <div id="dot_1" class="dot_1">
+            <div class="dot_1_1">
+            </div>
+        </div>
+        <div class="test_position_text">
+            <p>Informations</p>
+        </div>
+    </div>
+    <div class="test_position_2">
+        <div id="dot_2" class="dot_2">
+            <div class="dot_2_2">
+
+            </div>
+        </div>
+        <div class="test_position_text">
+            <p>Questionnaire</p>
+        </div>
+    </div>
+    <div class="test_position_3">
+        <div id="dot_3" class="dot_3">
+            <div class="dot_3_3">
+
+            </div>
+        </div>
+        <div class="test_position_text">
+            <p>Résultats</p>
+        </div>
+    </div>
+</div>
+
+</setion>
 
   
   <!-- TimeLine test -->
@@ -92,7 +128,7 @@
     </div>
 
 
-    <button class="nextQ">Question suivante</button>
+    <button id="next" class="nextQ">Question suivante</button>
 
   </section>
 
@@ -122,12 +158,6 @@
     <button class="nextQ">Question suivante</button>
 
   </section> -->
-
-
-
-
-
-
 
 
   <section class="main_2">
@@ -170,15 +200,5 @@
       $('.footer_contacte').load("Hero/footer2.html");
     });
   </script>
-
-<!-- <script>
-function displayQu(){
-  const pré = document.getElementById("Préambule");
-  const qu1 = document.getElementById("Q1");
-
-  pré.style.display = "none";
-  qu1.style.display = "block";
-};
-</script> -->
 
 </html>
