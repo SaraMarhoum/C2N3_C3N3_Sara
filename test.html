@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&family=Exo+2&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="src/css/normalize.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <script src="app/js/script.js"></script>
 </head>
 
 <body>
@@ -54,7 +55,7 @@
 
     </section>
 
-    <section class="Préambule">
+    <section id="Préambule"  class="Préambule">
       <div class="préambule_text">
         <h1>Préambule</h1>
         <p>L'application est fournie à titre gratuit, en l'état, uniquement à des fins d'information pour contribuer à fluidifier
@@ -67,10 +68,56 @@
           Les informations de cette application est le premier niveau de la détéction des cas possibles du COVID-19.
         </p>
       </div><br><br>
-      <button class="préambule_btn">Démarrer le test</button><br><br><br>
+      <button class="préambule_btn" onclick="displayQu()">Démarrer le test</button><br><br><br>
     </section>
     
   </main>
+
+
+
+  
+  <!-- TimeLine test -->
+  <section class="time_line" id="time_line" style="display: none;">
+    <div class="time_line_1">
+        <div id="line"></div>
+    </div>
+ </section>
+ 
+  <!-- question 1 -->
+
+  <section id="Q1" class="Q1" style="display: none;">
+    <h1>Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours<br> (frissons, sueurs) ?</h1>
+
+
+    <div class="opt_container">
+      <div class="option">
+      <input type="radio" id="check1" name="check" />
+      <label for="check1"> OUI</label>
+    </div>
+
+    <div class="option">
+      <input type="radio" id="check2" name="check" />
+      <label for="check1"> NON</label>
+    </div>
+    </div>
+    
+
+    <p class="notification">La prise d'anti-inflammatoires (ibuprofène, cortisone ...) pourrait être un facteur 
+      d'aggravation de l’infection. En cas de fièvre, prenez du paracétamol. Cette remarque 
+      concerne les traitements par gélules ou comprimés et ne concerne pas les formes inhalées. 
+      Si vous êtes déjà sous traitement, n'arrêtez pas ce traitement, demandez l'avis de votre 
+      médecin ou de votre pharmacien. </p> <br>
+
+    <button class="nextQ">Question suivante</button>
+
+  </section>
+
+
+
+
+
+
+
 
   <section class="main_2">
     <div class="main_2_darkBlue">
@@ -112,5 +159,15 @@
       $('.footer_contacte').load("Hero/footer2.html");
     });
   </script>
+
+<!-- <script>
+function displayQu(){
+  const pré = document.getElementById("Préambule");
+  const qu1 = document.getElementById("Q1");
+
+  pré.style.display = "none";
+  qu1.style.display = "block";
+};
+</script> -->
 
 </html>
