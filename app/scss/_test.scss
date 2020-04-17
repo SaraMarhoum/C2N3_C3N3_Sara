@@ -175,7 +175,7 @@ body{
             }
         }
     }}
-    }
+    
     
     
     // Time Line
@@ -247,7 +247,7 @@ body{
         //     font-size: 1.2em;
         //     line-height: 31px;
         // }
-        .nextQ{
+        .next{
             width: 13%;
             height: 50px;
             border: none;
@@ -262,6 +262,13 @@ body{
             margin-top: 37px;
         }
     }
+    
+        .Q{
+            display: inline-block;
+            display: none;
+        }
+    
+}
 
 
 
