@@ -45,16 +45,20 @@ var visibleQ = 0;
    showQ()
 
    function showNext(){
-     if(visibleQ== $(".Q").length-1){
+     if(visibleQ < 20){
+       if(visibleQ== $(".Q").length-1){
        visibleQ = 0;
      }
      else{
        visibleQ ++;
      }
      showQ();
+     }
    }
 
+   // display peevious questions every click on question précédente
    function showPrev(){
+    if(visibleQ > 0){
       if(visibleQ == 0){
         visibleQ = $(".Q").length-1;
       }
@@ -62,4 +66,9 @@ var visibleQ = 0;
         visibleQ --;
       }
       showQ();
+
     }
+      
+    }
+
+    
