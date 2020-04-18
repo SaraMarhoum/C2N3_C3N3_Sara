@@ -181,18 +181,19 @@ body{
     // Time Line
     .time_line{
         margin-bottom: 60px;
+        display: flex;
+        align-items: center;
+        margin-top: 34px;
+        justify-content: center;
         .time_line_1{
-            margin: auto;
             width: 40%;
             height: 15px;
             background-color: $lightBlueBackground;
             border-radius: 20px;
-            margin-top: 51px;
             #line{
                 height: 15px;
                 background-color: $lightBlueText;
                 border-radius: 20px;
-                display: block;
                 transition: .4s;
                 animation: advance 2s;
                 animation-fill-mode: forwards;
@@ -205,6 +206,9 @@ body{
                     }
                 }
             }
+        }
+        span{
+            font-weight: 700;
         }
     }
 

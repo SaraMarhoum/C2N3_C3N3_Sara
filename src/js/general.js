@@ -10,7 +10,7 @@ function displayQu(){
    var position2 = document.getElementById("test_position_questions");
    pré.style.display = "none";
    qu1.style.display = "block";
-   line.style.display = "block";
+   line.style.display = "flex";
    position1.style.display = "none";
    position2.style.display = "block";
 }
@@ -61,10 +61,12 @@ function startQ(){
         visibleQ --;
         }
       showQ();
+      updateProgress();
     } 
   }
 
 //make time line incremant with question ++
+
 
 //decide if continue afer age question 
   // (if input < 15 ==> alert && get back to accueil)
