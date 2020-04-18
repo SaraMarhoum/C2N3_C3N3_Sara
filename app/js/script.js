@@ -5,12 +5,10 @@
 function displayQu(){
    var pré = document.getElementById("Préambule");
    var qu1 = document.getElementById("Q1");
-   var line = document.getElementById("time_line");
    var position1 = document.getElementById("test_position");
    var position2 = document.getElementById("test_position_questions");
    pré.style.display = "none";
    qu1.style.display = "block";
-   line.style.display = "flex";
    position1.style.display = "none";
    position2.style.display = "block";
 }
@@ -61,7 +59,6 @@ function startQ(){
         visibleQ --;
         }
       showQ();
-      updateProgress();
     } 
   }
 

@@ -197,12 +197,14 @@ body{
                 transition: .4s;
                 animation: advance 2s;
                 animation-fill-mode: forwards;
+            }
+            .line1{
                 @keyframes advance {
                     0% {
                         width: 0%;
                     }
                     100% {
-                        width: 4.38%;
+                        width: 2%;
                     }
                 }
             }
