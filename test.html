@@ -112,23 +112,34 @@
 </section>
 
   
-  <!-- TimeLine test -->
-  <section class="time_line" id="time_line" style="display: none;">
-    <div class="time_line_1">
-        <div id="line"></div>
-    </div>
-    <span classe="number" id="number">1/23</span>
- </section>
+  
  
   <!-- question 1 -->
 
   <section id="Q1" class="Q1" style="display: none;">
+    <!-- TimeLine test -->
+  <section class="time_line" id="time_line" style="display: none;">
+    <div class="time_line_1">
+        <div id="line"></div>
+    </div>
+    <p classe="number">1/22</p>
+ </section>
     <h1>Quel est votre âge? Ceci, afin de calculer un facteur de risque<br>spécifique.</h1>
     <div id="inputButton">
       <input class="ageButton" type="number" placeholder="27" /><button>Ans</button>
     </div>
     <button id="next" class="next" onclick="startQ()">Question suivante</button>
   </section>
+
+
+<!-- TimeLine test -->
+  <section class="time_line" id="time_line_2" style="display: none;">
+    <div class="time_line_1">
+        <div id="line"></div>
+    </div>
+    <p classe="number" ><span id="number_stepper">2</span>/22</p>
+ </section>
+
 
     <!-- question 2 -->
     <div id="questionsStepper" class="Q">
@@ -469,6 +480,7 @@
     <!-- Next and previous buttons for question stepper -->
     <button class="showPrev" id="showPrev" onclick="showPrev()" style="display: none;">Question précédente</button>
     <button class="showNext" id="showNext" onclick="showNext()" style="display: none;">Question suivante</button>
+    
   
 
   <!-- Main 2 recommendation section for separated Footer -->
