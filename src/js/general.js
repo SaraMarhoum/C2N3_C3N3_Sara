@@ -79,7 +79,7 @@ function displaycount(){
         }
       showQ();
     } 
-}
+  }
 
 //make time line incremant with question ++ using JS
 
