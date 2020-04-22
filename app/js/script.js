@@ -19,11 +19,13 @@ function startQ(){
   const qu1 = document.getElementById("Q1");
   var showN = document.getElementById("showNext");
   var showP = document.getElementById("showPrev");
+  var line2 = document.getElementById("time_line_2");
    
   qu1.style.display = "none";
   qStepper.style.display = "block";
   showN.style.display = "block";
   showP.style.display = "block";
+  line2.style.display = "flex";
 }
 
   // display next questions every click on question suivante using Jquery
@@ -47,7 +49,24 @@ function startQ(){
       }
      showQ();
     }
+    //make time line incremant with question ++
+    displaycount();  
   }
+
+//make time line incremant with question ++
+var count = (function(){
+
+  var counter = 2;
+     
+    return function(){
+    return counter +=1;
+    }
+
+})();
+
+function displaycount(){
+  document.getElementById("number_stepper").innerHTML = count();
+}
 
   // display peevious questions every click on question précédente using Jquery
   function showPrev(){
@@ -63,6 +82,7 @@ function startQ(){
   }
 
 //make time line incremant with question ++ using JS
+
 
 
 //decide if continue afer age question 
