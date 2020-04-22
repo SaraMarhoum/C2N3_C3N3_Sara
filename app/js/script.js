@@ -62,7 +62,7 @@ function startQ(){
     } 
   }
 
-//make time line incremant with question ++
+//make time line incremant with question ++ using JS
 
 
 //decide if continue afer age question 
