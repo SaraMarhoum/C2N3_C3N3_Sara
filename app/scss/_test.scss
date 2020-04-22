@@ -178,20 +178,19 @@ body{
     
     
     
-    // Time Line
+    // Time Line1
     .time_line{
         margin-bottom: 60px;
         display: flex;
         align-items: center;
         margin-top: 34px;
         justify-content: center;
-        font-weight: 700;
         .time_line_1{
             width: 40%;
             height: 15px;
             background-color: $lightBlueBackground;
             border-radius: 20px;
-            #line{
+            #line1{
                 height: 15px;
                 background-color: $lightBlueText;
                 border-radius: 20px;
@@ -203,10 +202,13 @@ body{
                         width: 0%;
                     }
                     100% {
-                        width: 4.38%;
+                        width: 4.5%;
                     }
                 }
             }
+        }
+        span{
+            font-weight: 700;
         }
     }
 
@@ -242,6 +244,349 @@ body{
     .Q{
         display: inline-block;
         display: none;
+        .time_line{
+            .time_line_1{
+                #line2{
+                    height: 15px;
+                background-color: $lightBlueText;
+                border-radius: 20px;
+                transition: .4s;
+                animation: advance2 2s;
+                animation-fill-mode: forwards;
+                }
+                .line2{
+                    @keyframes advance2 {
+                        0% {
+                            width: 4.5%;
+                        }
+                        100% {
+                            width: 9%;
+                        }
+                    }
+                }
+                #line3{
+                    height: 15px;
+                background-color: $lightBlueText;
+                border-radius: 20px;
+                transition: .4s;
+                animation: advance3 2s;
+                animation-fill-mode: forwards;
+                @keyframes advance3 {
+                        0% {
+                            width: 9%;
+                        }
+                        100% {
+                            width: 13.5%;
+                        }
+                    }
+                }
+                #line4{
+                    height: 15px;
+                background-color: $lightBlueText;
+                border-radius: 20px;
+                transition: .4s;
+                animation: advance4 2s;
+                animation-fill-mode: forwards;
+                @keyframes advance4 {
+                        0% {
+                            width: 13.5%;
+                        }
+                        100% {
+                            width: 18%;
+                        }
+                    }
+                }
+                #line5{
+                    height: 15px;
+                background-color: $lightBlueText;
+                border-radius: 20px;
+                transition: .4s;
+                animation: advance5 2s;
+                animation-fill-mode: forwards;
+                @keyframes advance5 {
+                        0% {
+                            width: 18%;
+                        }
+                        100% {
+                            width: 22.5%;
+                        }
+                    }
+                }
+                #line6{
+                    height: 15px;
+                background-color: $lightBlueText;
+                border-radius: 20px;
+                transition: .4s;
+                animation: advance6 2s;
+                animation-fill-mode: forwards;
+                @keyframes advance6 {
+                        0% {
+                            width: 22.5%;
+                        }
+                        100% {
+                            width: 27%;
+                        }
+                    }
+                }
+                #line7{
+                    height: 15px;
+                background-color: $lightBlueText;
+                border-radius: 20px;
+                transition: .4s;
+                animation: advance7 2s;
+                animation-fill-mode: forwards;
+                @keyframes advance7 {
+                        0% {
+                            width: 27%;
+                        }
+                        100% {
+                            width: 31.5%;
+                        }
+                    }
+                }
+                #line8{
+                    height: 15px;
+                background-color: $lightBlueText;
+                border-radius: 20px;
+                transition: .4s;
+                animation: advance8 2s;
+                animation-fill-mode: forwards;
+                @keyframes advance8 {
+                        0% {
+                            width: 31.5%;
+                        }
+                        100% {
+                            width: 36%;
+                        }
+                    }
+                }
+                #line9{
+                    height: 15px;
+                background-color: $lightBlueText;
+                border-radius: 20px;
+                transition: .4s;
+                animation: advance9 2s;
+                animation-fill-mode: forwards;
+                @keyframes advance9 {
+                        0% {
+                            width: 36%;
+                        }
+                        100% {
+                            width: 40.5%;
+                        }
+                    }
+                }
+                #line10{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance10 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance10 {
+                        0% {
+                            width: 40.5%;
+                        }
+                        100% {
+                            width: 45%;
+                        }
+                    }
+                }
+                #line11{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance11 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance11 {
+                        0% {
+                            width: 45%;
+                        }
+                        100% {
+                            width: 49.5%;
+                        }
+                    }
+                }
+                #line12{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance12 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance12 {
+                        0% {
+                            width: 49.5%;
+                        }
+                        100% {
+                            width: 54%;
+                        }
+                    }
+                }
+                #line13{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance13 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance13 {
+                        0% {
+                            width: 54%;
+                        }
+                        100% {
+                            width: 58.5%;
+                        }
+                    }
+                }
+                #line14{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance14 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance14 {
+                        0% {
+                            width: 58.5%;
+                        }
+                        100% {
+                            width: 63%;
+                        }
+                    }
+                }
+                #line15{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance15 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance15 {
+                        0% {
+                            width: 63%;
+                        }
+                        100% {
+                            width: 67.5%;
+                        }
+                    }
+                }
+                #line16{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance16 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance16 {
+                        0% {
+                            width: 67.5%;
+                        }
+                        100% {
+                            width: 72%;
+                        }
+                    }
+                }
+                #line17{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance17 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance17 {
+                        0% {
+                            width: 72%;
+                        }
+                        100% {
+                            width: 76.5%;
+                        }
+                    }
+                }
+                #line18{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance18 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance18 {
+                        0% {
+                            width: 76.5%;
+                        }
+                        100% {
+                            width: 81%;
+                        }
+                    }
+                }
+                #line19{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance19 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance19 {
+                        0% {
+                            width: 81%;
+                        }
+                        100% {
+                            width: 85.5%;
+                        }
+                    }
+                }
+                #line20{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance20 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance20 {
+                        0% {
+                            width: 85.5%;
+                        }
+                        100% {
+                            width: 90%;
+                        }
+                    }
+                }
+                #line21{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance21 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance21 {
+                        0% {
+                            width: 90%;
+                        }
+                        100% {
+                            width: 94.5%;
+                        }
+                    }
+                }
+                #line22{
+                    height: 15px;
+                    background-color: $lightBlueText;
+                    border-radius: 20px;
+                    transition: .4s;
+                    animation: advance22 2s;
+                    animation-fill-mode: forwards;
+                    @keyframes advance22 {
+                        0% {
+                            width: 94.5%;
+                        }
+                        100% {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
         h1{
             color: $testgrey;
             text-align: center;
