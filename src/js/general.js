@@ -19,13 +19,11 @@ function startQ(){
   const qu1 = document.getElementById("Q1");
   var showN = document.getElementById("showNext");
   var showP = document.getElementById("showPrev");
-  var line2 = document.getElementById("time_line_2");
    
   qu1.style.display = "none";
   qStepper.style.display = "block";
   showN.style.display = "block";
   showP.style.display = "block";
-  line2.style.display = "flex";
 }
 
   // display next questions every click on question suivante using Jquery
