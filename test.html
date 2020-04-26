@@ -127,7 +127,7 @@
 
     <h1>Quel est votre âge? Ceci, afin de calculer un facteur de risque<br>spécifique.</h1>
     <div id="inputButton">
-      <input id="ageInp" class="ageButton" type="number" placeholder="27" /><button>Ans</button>
+      <input id="ageInp" class="ageButton" type="number" placeholder="27"/><button>Ans</button>
     </div>
     <button id="next" class="next" onclick="startQ()">Question suivante</button>
   </section>
@@ -172,7 +172,7 @@
    </section>
       <h1>Qelle est votre température corporelle ?</h1>
       <div id="inputButton">
-        <input class="tempButton" type="number" placeholder="34-42" /><button>degrés</button>
+        <input class="tempButton" id="temp" type="number" placeholder="34-42" /><button>degrés</button>
       </div>
     </div>
 
@@ -188,12 +188,12 @@
       <h1>Ces derniers jours, avez-vous une toux ou une augmentation de votre<br> toux habituelle ?</h1>
       <div class="opt_container">
         <div class="option">
-        <input type="radio" id="check1" name="check" />
+        <input type="radio" id="check3" name="check" />
         <label for="check1"> OUI</label>
       </div>
   
       <div class="option">
-        <input type="radio" id="check2" name="check" />
+        <input type="radio" id="check4" name="check" />
         <label for="check1"> NON</label>
       </div>
       </div>
@@ -382,7 +382,7 @@
       <h1>Quel est votre poids ? Afin de calculer l’indice de masse corporelle qui<br> est un facteur influençant 
         le risque de complications de l’infection.</h1>
     <div id="inputButton">
-      <input class="poidButton" type="number" placeholder="20-250" /><button>Kg</button>
+      <input class="poidButton" id="poid" type="number" placeholder="20-250" /><button>Kg</button>
     </div>
   </div>
 
@@ -398,7 +398,7 @@
       <h1>Quelle est votre taille ? Afin de calculer l’indice de masse corporelle<br> qui est un facteur influençant 
         le risque de complications de l’infection.</h1>
     <div id="inputButton">
-      <input class="tailleButton" type="number" placeholder="80-250" /><button>cm</button>
+      <input class="tailleButton" id="taille" type="number" placeholder="80-250" /><button>cm</button>
     </div>
   </div>
 
