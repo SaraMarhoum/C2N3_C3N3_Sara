@@ -1,659 +1,326 @@
-body{
-    main{
-        margin-bottom: -88px;
-        .test_position{
-            .test_position_container_1{
-                display: flex;
-                max-width: 40%;
-                justify-content: space-between;
-                margin: auto;
-                margin-top: 35px;
-                margin-bottom: 35px;
-                font-weight: 700;
-                .test_position_text{
-                    padding-top: 5px;
-                }
-                .test_position_1{
-                    .dot_1{
-                    margin: auto;
-                    margin-top: auto;
-                    margin-top: auto;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    background-color: $lightBlueBackground;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    .dot_1_1{
-                        width: 15px;
-                        height: 15px;
-                        border-radius: 50%;
-                        background-color: $yellow;
-                    }
-                    }
-                }
-                .dot_2{
-                    margin: auto;
-                    margin-top: auto;
-                    margin-top: auto;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    .dot_2_2{
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 50%;
-                    background-color: $lightBlueText;
-                    }
-                }
-                .dot_3{
-                    margin: auto;
-                    margin-top: auto;
-                    margin-top: auto;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    .dot_3_3{
-                    width: 15px;
-                    height: 15px;
-                    border-radius: 50%;
-                    background-color: $lightBlueText;
-                    }
-                }
-            }
-        }
-        .Préambule{
-            display: block;
-            .préambule_text{
-                background-color: $lightBlueBackground;
-                width: 70%;
-                margin: auto;
-                text-align: center;
-                padding: 20px;
-                border-radius: 10px;
-                h1{
-                    color: $lightBlueText;
-                    font-size: 1.8em;
-                }
-                p{
-                    font-weight: 600;
-                    font-size: 1.1em;
-                    line-height: 35px;
-                }
-                .préambule_ligne{
-                    border-bottom: 3px solid #f4cf1b;
-                    width: 240px;
-                    margin: auto;
-                }
-            }
-            .préambule_btn{
-                width: 20%;
-                height: 50px;
-                border: none;
-                border-radius: 5px;
-                background-color: $lightBlueText;
-                color: white;
-                font-size: larger;
-                margin-left: auto;
-                margin-right: auto;
-                display: block;
-                font-weight: 700;
-            }
-        }
-    }
+$color2 :#7F7F7F;
+$btn_color :#1078ad;
+$bg_color : #F4CF1B;
+$num_color :#369D53;
+$ot_color :#D0E5F0;
+$bg_test :#96C5DC;
+$text_color:#1A519E;
 
-    //position container for questions
-    .test_position_questions{
-        .test_position_container_2{
-        display: flex;
-        max-width: 40%;
-        justify-content: space-between;
-        margin: auto;
-        margin-top: 135px;
-        font-weight: 700;
-        .test_position_text{
-            padding-top: 5px;
-        }
-        .test_position_1{
-            .dot_1{
-                margin: auto;
-                margin-top: auto;
-                margin-top: auto;
-                width: 40px;
-                height: 40px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-            .dot_1_1{
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                background-color: $lightBlueText;
-            }
-            }
-        }
-        .dot_2{
-            margin: auto;
-                    margin-top: auto;
-                    margin-top: auto;
-                    width: 40px;
-                    height: 40px;
-                    border-radius: 50%;
-                    background-color: $lightBlueBackground;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-            .dot_2_2{
-                width: 15px;
-                height: 15px;
-                border-radius: 50%;
-                background-color: $yellow;
-        }}
-        .dot_3{
-            margin: auto;
-            margin-top: auto;
-            margin-top: auto;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            .dot_3_3{
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            background-color: $lightBlueText;
-            }
-        }
-    }}
+body {
+  overflow-x: hidden;
+  main{
+    margin-top: -81px;
+    progress{
+      border-radius: 15px;
+      height: 24px;
+      background-color: rgb(231, 249, 255);
+      border: 0;
+    }
+      progress::-moz-progress-bar {
+        border-radius: 12px;
+        background: linear-gradient(to right, #0066cc 0%, #66ffff 100%);
+        box-shadow: inset 0 -2px 4px rgba(0, 0, 0, 0.4), 0 2px 5px 0px rgba(0, 0, 0, 0.3);
+        height: 23px;
+      }
     
-    
-    
-    // Time Line1
-    .time_line{
-        margin-bottom: 60px;
-        display: flex;
-        align-items: center;
-        margin-top: 34px;
-        justify-content: center;
-        .time_line_1{
-            width: 40%;
-            height: 15px;
-            background-color: $lightBlueBackground;
-            border-radius: 20px;
-            #line1{
-                height: 15px;
-                background-color: $lightBlueText;
-                border-radius: 20px;
-                transition: .4s;
-                animation: advance 2s;
-                animation-fill-mode: forwards;
-                @keyframes advance {
-                    0% {
-                        width: 0%;
-                    }
-                    100% {
-                        width: 4.5%;
-                    }
-                }
-            }
-        }
-        span{
-            font-weight: 700;
-        }
-    }
-
-    //First age question styling
-    .Q1{
-        h1{
-            color: $testgrey;
-            text-align: center;
-        }
-        #inputButton{
-            display: flex;
-            justify-content: center;
-            margin-top: 77px;
-            padding-bottom: 44px;
-        }
-        .next{
-            width: 13%;
-            height: 50px;
-            border: none;
-            border-radius: 5px;
-            background-color: $lightBlueText;
-            color: white;
-            font-size: larger;
-            margin-left: auto;
-            margin-right: auto;
-            display: block;
-            font-weight: 700;
-            margin-top: 37px;
-        }
-    }
-    
-    //Question stepper styling
-    .Q{
-        display: inline-block;
-        display: none;
-        .time_line{
-            .time_line_1{
-                #line2{
-                    height: 15px;
-                background-color: $lightBlueText;
-                border-radius: 20px;
-                transition: .4s;
-                animation: advance2 2s;
-                animation-fill-mode: forwards;
-                }
-                .line2{
-                    @keyframes advance2 {
-                        0% {
-                            width: 4.5%;
-                        }
-                        100% {
-                            width: 9%;
-                        }
-                    }
-                }
-                #line3{
-                    height: 15px;
-                background-color: $lightBlueText;
-                border-radius: 20px;
-                transition: .4s;
-                animation: advance3 2s;
-                animation-fill-mode: forwards;
-                @keyframes advance3 {
-                        0% {
-                            width: 9%;
-                        }
-                        100% {
-                            width: 13.5%;
-                        }
-                    }
-                }
-                #line4{
-                    height: 15px;
-                background-color: $lightBlueText;
-                border-radius: 20px;
-                transition: .4s;
-                animation: advance4 2s;
-                animation-fill-mode: forwards;
-                @keyframes advance4 {
-                        0% {
-                            width: 13.5%;
-                        }
-                        100% {
-                            width: 18%;
-                        }
-                    }
-                }
-                #line5{
-                    height: 15px;
-                background-color: $lightBlueText;
-                border-radius: 20px;
-                transition: .4s;
-                animation: advance5 2s;
-                animation-fill-mode: forwards;
-                @keyframes advance5 {
-                        0% {
-                            width: 18%;
-                        }
-                        100% {
-                            width: 22.5%;
-                        }
-                    }
-                }
-                #line6{
-                    height: 15px;
-                background-color: $lightBlueText;
-                border-radius: 20px;
-                transition: .4s;
-                animation: advance6 2s;
-                animation-fill-mode: forwards;
-                @keyframes advance6 {
-                        0% {
-                            width: 22.5%;
-                        }
-                        100% {
-                            width: 27%;
-                        }
-                    }
-                }
-                #line7{
-                    height: 15px;
-                background-color: $lightBlueText;
-                border-radius: 20px;
-                transition: .4s;
-                animation: advance7 2s;
-                animation-fill-mode: forwards;
-                @keyframes advance7 {
-                        0% {
-                            width: 27%;
-                        }
-                        100% {
-                            width: 31.5%;
-                        }
-                    }
-                }
-                #line8{
-                    height: 15px;
-                background-color: $lightBlueText;
-                border-radius: 20px;
-                transition: .4s;
-                animation: advance8 2s;
-                animation-fill-mode: forwards;
-                @keyframes advance8 {
-                        0% {
-                            width: 31.5%;
-                        }
-                        100% {
-                            width: 36%;
-                        }
-                    }
-                }
-                #line9{
-                    height: 15px;
-                background-color: $lightBlueText;
-                border-radius: 20px;
-                transition: .4s;
-                animation: advance9 2s;
-                animation-fill-mode: forwards;
-                @keyframes advance9 {
-                        0% {
-                            width: 36%;
-                        }
-                        100% {
-                            width: 40.5%;
-                        }
-                    }
-                }
-                #line10{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance10 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance10 {
-                        0% {
-                            width: 40.5%;
-                        }
-                        100% {
-                            width: 45%;
-                        }
-                    }
-                }
-                #line11{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance11 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance11 {
-                        0% {
-                            width: 45%;
-                        }
-                        100% {
-                            width: 49.5%;
-                        }
-                    }
-                }
-                #line12{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance12 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance12 {
-                        0% {
-                            width: 49.5%;
-                        }
-                        100% {
-                            width: 54%;
-                        }
-                    }
-                }
-                #line13{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance13 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance13 {
-                        0% {
-                            width: 54%;
-                        }
-                        100% {
-                            width: 58.5%;
-                        }
-                    }
-                }
-                #line14{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance14 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance14 {
-                        0% {
-                            width: 58.5%;
-                        }
-                        100% {
-                            width: 63%;
-                        }
-                    }
-                }
-                #line15{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance15 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance15 {
-                        0% {
-                            width: 63%;
-                        }
-                        100% {
-                            width: 67.5%;
-                        }
-                    }
-                }
-                #line16{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance16 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance16 {
-                        0% {
-                            width: 67.5%;
-                        }
-                        100% {
-                            width: 72%;
-                        }
-                    }
-                }
-                #line17{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance17 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance17 {
-                        0% {
-                            width: 72%;
-                        }
-                        100% {
-                            width: 76.5%;
-                        }
-                    }
-                }
-                #line18{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance18 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance18 {
-                        0% {
-                            width: 76.5%;
-                        }
-                        100% {
-                            width: 81%;
-                        }
-                    }
-                }
-                #line19{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance19 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance19 {
-                        0% {
-                            width: 81%;
-                        }
-                        100% {
-                            width: 85.5%;
-                        }
-                    }
-                }
-                #line20{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance20 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance20 {
-                        0% {
-                            width: 85.5%;
-                        }
-                        100% {
-                            width: 90%;
-                        }
-                    }
-                }
-                #line21{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance21 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance21 {
-                        0% {
-                            width: 90%;
-                        }
-                        100% {
-                            width: 94.5%;
-                        }
-                    }
-                }
-                #line22{
-                    height: 15px;
-                    background-color: $lightBlueText;
-                    border-radius: 20px;
-                    transition: .4s;
-                    animation: advance22 2s;
-                    animation-fill-mode: forwards;
-                    @keyframes advance22 {
-                        0% {
-                            width: 94.5%;
-                        }
-                        100% {
-                            width: 100%;
-                        }
-                    }
-                }
-            }
-        }
-
-        h1{
-            color: $testgrey;
-            text-align: center;
-        }
-        .notification{
-            width: 50%;
-            padding: 20px;
-            text-align: center;
-            background-color: $yellow;
-            border-radius: 10px;
-            margin: auto;
-            font-weight: 600;
-            font-size: 1.2em;
-            line-height: 31px;
-        }
-        #inputButton{
-            display: flex;
-            justify-content: center;
-            margin-top: 77px;
-            padding-bottom: 44px;
-        }
-        .opt_container{
-            padding-top: 34px;
-            padding-bottom: 55px;
-            .option{
-                width: 55%;
-                margin: auto;
-                label{
-                    font-size:1.6em;
-                    cursor: pointer;
-                    color: $lightBlueText;
-                    font-weight: 600;
-                }
-                input{
-                    height: 20px;
-                    width: 20px;
-                }
-            }
-        } 
-    }
-
-    //Prévious and next buttion for quesions
-    .showNext{
-        width: 13%;
-        height: 50px;
-        border: none;
-        border-radius: 5px;
-        background-color: $lightBlueText;
-        color: white;
-        font-size: larger;
-        float:right;
-        font-weight: 700;
-        margin-right: 333px;
-    }
-    .showPrev{
-        width: 13%;
-        height: 50px;
-        border: none;
-        border-radius: 5px;
-        background-color: $lightBlueText;
-        color: white;
-        font-size: larger;
-        float:left;
-        font-weight: 700;
-        margin-left: 333px;
-    }
+  }
 }
+
+.header__text {
+  display: none;
+}
+
+
+.numerotation {
+  display: flex;
+  justify-content: space-between;
+
+  p {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: $text_color;
+    margin-top: 5px;
+    margin-right: 12px;
+    margin-left: -42px;
+  }
+}
+
+.relative {
+  position: relative;
+  width: 100%;
+}
+
+#file {
+  margin-top: 0.5em;
+  width: 88.1%;
+  margin-left: 10%;
+  position: absolute;
+  top: 8px;
+  right: 5.9%;
+
+}
+
+.main {
+    
+  &__inform {
+    text-align: center;
+    margin-bottom: 3%;
+    padding-top: 7em;
+
+    &__img {
+      width: 2.5em;
+      height: 2.5em;
+
+      &--active {
+        border: 10px solid $btn_color;
+        border-radius: 50%;
+
+      }
+    }
+
+    a {
+      color: #fff;
+      padding: 0.4% 5%;
+      background-color: #1078ad;
+      border-radius: 5px;
+      font-size: 1.6em;
+      font-weight: 700;
+      text-decoration: none;
+
+    }
+  }
+
+  &__tags {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin: 3% auto;
+  }
+
+  &__tag {
+    h3 {
+      color: $btn_color;
+      font-weight: 700;
+    }
+  }
+
+  &__Preambule {
+    width: 70%;
+    margin: 2% auto;
+    background-color: $bg_test;
+    padding: 1%;
+    border-radius: 5px;
+
+    h3 {
+      color: $btn_color;
+      font-weight: 700;
+      font-size: 2em;
+
+    }
+
+    p {
+      margin: 2% 0;
+      font-weight: 600;
+      font-size: 1.1em;
+      line-height: 35px;
+
+    }
+
+    &__ligne{
+    border-bottom: 3px solid #f4cf1b;
+    width: 240px;
+    margin: auto;
+    }
+  }
+  
+
+  &__questionnaire {
+    text-align: center;
+    padding-top: 7em;
+
+  }
+
+  &__Resultat {
+    padding-top: 7em;
+    text-align: center;
+  }
+}
+
+.affiche__resultat {
+  max-width: 65%;
+  margin: 2em auto;
+  padding: 2em 3em;
+  background-color: $bg_test;
+  border-radius: 10px;
+
+  h3 {
+    font-size: 2em;
+    font-weight: 700;
+    color: $text_color;
+  }
+
+  p {
+    font-size: 1.5em;
+    font-weight: 500;
+    margin: 1em 0;
+    color: rgb(71, 71, 71);
+
+  }
+
+  span {
+    font-size: 1.2em;
+    color: $text_color;
+  }
+}
+
+
+
+
+/////////////////js////////////////
+.affiche {
+  display: none;
+}
+
+form {
+  border: 3px solid $bg_test;
+  border-radius: 1em;
+  padding: 2em 4em;
+  max-width: 65%;
+  margin: 3em auto;
+}
+
+.barNumber {
+  border: 3px solid $bg_test;
+  border-radius: 1em;
+  margin-bottom: 1em;
+}
+
+.questions {
+  p {
+    font-weight: 700;
+    font-size: 1.5em;
+    color: $color2;
+    height: 26vh;
+    padding-top: 5%;
+  }
+}
+
+
+
+
+.reponces {
+  height: 24vh;
+  display: flex;
+  padding-top: 5%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+  label {
+    margin-left: 0.4em;
+    font-size: 2em;
+  }
+
+  .inputText {
+    margin-left: 20%;
+  }
+
+  div {
+    width: 45%;
+  }
+}
+
+#repeter {
+  border: 1px dotted $text_color;
+  border-radius: 5px;
+  padding: 5px 35px;
+  font-size: 1.5em;
+  font-weight: 600;
+  background-color: $btn_color;
+  margin: 2em auto;
+  color: white;
+}
+
+.inputs {
+  display: flex;
+  justify-content: space-between;
+
+  #precedent,
+  #suivant,
+  #resultat {
+    border: 1px dotted $text_color;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 1.5em;
+    font-weight: 600;
+    background-color: $btn_color;
+    color: white;
+  }
+
+}
+
+.answer-inputs {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25vh;
+
+  .margine{
+    padding-left: 60px;
+  }
+}
+
+.answer-inputs input[type="number"] {
+  font-size: 16px;
+  border: 1px solid #1078AD;
+  width: 55%;
+  padding: 10px;
+}
+
+.answer-inputs .input-span {
+  font-size: 22px;
+  border: 1px solid #1078AD;
+  border-left: none;
+  padding: 4px 10px 5px;
+  color: #555555;
+  background-color: #edf6fa;
+}
+
+.answer-inputs input[type="radio"] {
+  -webkit-appearance: none;
+}
+
+.answer-inputs input[type="radio"]:checked+label {
+  background-color: #1078AD;
+  color: #F4CF1B;
+}
+
+.answer-inputs label {
+  height: 80px;
+  width: 120px;
+  color: #1078AD;
+  border-radius: 4px;
+  border: 4px solid #1078AD;
+  font-size: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 0px 0;
+  transition: .5s ease;
+  margin-right: 50px;
+}
+
+.answer-inputs label span {
+  font-size: 22px;
+  position: relative;
+  bottom: 5px;
+}
+
+input:disabled {
+  cursor: not-allowed;
+}
+
+
 
 
 

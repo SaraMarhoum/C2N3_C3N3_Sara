@@ -1,250 +1,343 @@
 
-// display test start when click button demarrer le test
-   // switch from préambule to 1st question
-   
-function displayQu(){
-   var pré = document.getElementById("Préambule");
-   var qu1 = document.getElementById("Q1");
-   var position1 = document.getElementById("test_position");
-   var position2 = document.getElementById("test_position_questions");
-   pré.style.display = "none";
-   qu1.style.display = "block";
-   position1.style.display = "none";
-   position2.style.display = "block";
-}
+// Tableaux des 4 rubriques pour le stockage des donnés/////////////////////////////////////////////////////
+tabSymptome = [];
+tabfacteurPronostique = [];
+tabfacteurMineur = [];
+tabfacteurMajeur = [];
 
-//decide if continue afer age question 
-  // (if input < 15 ==> alert && get back to accueil)
-  // (if input >= 15 ==> continue question stepper)
 
-  function ageCondition(){
-    var pré = document.getElementById("Préambule");
-    var qu1 = document.getElementById("Q1");
-    var position1 = document.getElementById("test_position");
-    var position2 = document.getElementById("test_position_questions");
+// Mettre à 0 les 4 rubriques pour les incrémenter en fonction des donnés selectionnés par l'utilisateur////
+resultSyptome = 0;
+resultFacteurPronostique = 0;
+resultfacteurMineur = 0;
+resultfacteurMajeur = 0;
 
-      alert("Prenez contact avec votre médecin généraliste au moindre doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins de 15 ans. En cas d’urgence, appeler le 15.")
-      pré.style.display = "block";
-      qu1.style.display = "none";
-      position1.style.display = "block";
-      position2.style.display = "none";   
-  }
 
-  //display 1st stepper question after cheking age
-function startQ(){
-  let AgeInput = document.getElementById("ageInp").value;
-
-  var qStepper  = document.getElementById("questionsStepper");
-  const qu1 = document.getElementById("Q1");
-  var showN = document.getElementById("showNext");
-  var showP = document.getElementById("showPrev");
-
-  if(AgeInput < 15){
-    ageCondition();
-  }
-   else{
-     qu1.style.display = "none";
-  qStepper.style.display = "block";
-  showN.style.display = "block";
-  showP.style.display = "block";
-   }
-}
-
-  // display next questions every click on question suivante using Jquery
-  var visibleQ = 0;
-
-  function showQ(){
-     
-    $(".Q").hide();
-    $(".Q:eq("+ visibleQ +")").show();
-  }
-   
-  showQ()
-
-  function showNext(){
-    if(visibleQ < 20){
-      if(visibleQ== $(".Q").length-1){
-        visibleQ = 0;
-      }
-      else{
-        visibleQ ++;
-      }
-     showQ();
+// Fonction pour remplir les tableau de chaque rubrique avec les résultats des questions qui conviènnent////
+trireponces = () => {
+  for (let i = 0; i < resultat.length; i++) {
+    if (i == 1) {
+      tabfacteurMineur.push(resultat[i]);
+      tabfacteurMajeur.push(resultat[i]);
+    } else if (i >= 11 && i <= 21) {
+      tabfacteurPronostique.push(resultat[i]);
+    } else if (i == 7 || i == 8) {
+      tabfacteurMajeur.push(resultat[i]);
+    } else if (i == 6 || i == 9) {
+      tabfacteurMineur.push(resultat[i]);
     }
-    //make time line incremant with question ++
-    displaycount();  
-  }
-
-//make time line incremant with question ++
-var count = (function(){
-
-  var counter = 2;
-     
-    return function(){
-    return counter +=1;
+    //ex: pusher les resultats des question de 0 à 9 dans le tableau des symptomes 
+    if (i >= 0 && i <= 9) {
+      tabSymptome.push(resultat[i]);
     }
+  }
+};
 
-})();
 
-function displaycount(){
-  document.getElementById("number_stepper").innerHTML = count();
-}
+// Fonction pour incremonter les resultat des rubriques en fonction des rép dans chaque tab de la même rubrique///
+nombreDeFacteur = () => {
+  for (let i = 0; i < tabSymptome.length; i++) {
+      //ex : si la valeur choisie est oui pour les questions dans le tab des symptomes, le resultSymp est incrémenté + 1
+    if (tabSymptome[i] == "Oui") {
+      resultSyptome++;
+    }
+  }
+  for (let i = 0; i < tabfacteurPronostique.length; i++) {
+      //ex : pour chaque valeur choisi dans le tab des factProno = à oui ou input >= 70 , incrémenter resultFacteurPronostique
+    if (tabfacteurPronostique[i] >= 70 || tabfacteurPronostique[i] == "Oui") {
+      resultFacteurPronostique++;
+    }
+  }
+  for (let i = 0; i < tabfacteurMineur.length; i++) {
+    if (
+      tabfacteurMineur[i] >= 39 ||
+      tabfacteurMineur[i] == "Oui" ||
+      tabfacteurMineur[i] == "Très fatigué" ||
+      tabfacteurMineur[i] == " fatigué"
+    ) {
+      resultfacteurMineur++;
+    }
+  }
+  for (let i = 0; i < tabfacteurMajeur.length; i++) {
+    if (tabfacteurMajeur[i] <= 35.4 || tabfacteurMajeur[i] == "Oui") {
+      resultfacteurMajeur++;
+    }
+  }
+};
 
-  // display peevious questions every click on question précédente using Jquery
-  function showPrev(){
-    if(visibleQ > 0){
-      if(visibleQ == 0){
-        visibleQ = $(".Q").length-1;
+
+// Fonction pour l'algo decisionel du quizz//////////////////////////////////////////////////////////////////////
+let messageFinal = document.getElementById("affichageResult");
+
+Algorithme = () => {
+
+    //Patient avec fièvre, ou toux + mal de gorge, ou toux + courbatures ou fièvre + diarrhée :   
+    if (resultat[0] == "Oui" || (resultat[2] == "Oui" && resultat[4] == "Oui") || (resultat[2] == "Oui" && resultat[3] == "Oui") || (resultat[0] == "Oui" && resultat[5] == "Oui")) {
+        //Tout patient sans facteur pronostique  
+        if (resultFacteurPronostique == 0) {
+            //Sans facteur de gravité & <50 ans
+            if (resultfacteurMajeur == 0 && resultfacteurMineur == 0 && resultat[10] < 50 ) {
+                messageFinal.innerText = messageAffiche[0];
+            }
+            // Sans facteur de gravité & 50-69 ans, ou avec au moins un facteur de gravité mineur 
+            else if ( resultfacteurMajeur == 0 && resultfacteurMineur >= 1 && (resultat[10] >= 50 || resultat[10] <= 69)) {
+                messageFinal.innerText = messageAffiche[1];
+            }
         }
-      else{
-        visibleQ --;
+        // Tout patient avec un facteur pronostique ou plus
+        else {
+            //Aucun facteur de gravité / Un seul facteur de gravité mineur
+            if (resultfacteurMajeur == 0 && resultfacteurMineur <= 1) {
+                messageFinal.innerText = messageAffiche[1];
+            }
+            //Au moins deux facteurs de gravité mineurs     
+            else if (resultfacteurMajeur == 0 && resultfacteurMineur >= 2) {
+                messageFinal.innerText = messageAffiche[2];
+            }
         }
-      showQ();
+        // Tout patient avec ou sans facteur pronostique avec au moins un facteur de gravité majeur
+        if (resultfacteurMajeur >= 1) {
+            messageFinal.innerText = messageAffiche[2];
+        }
     } 
-  }
+    
 
-
-
-//Collect answers and give result depanding on inputs
-  //Storing the user's answers in an object
-  let rép = {};
-
-  function CollectAnswers(){
-
-    // Let the user check answers into the Object "rép"
-    function choix(id1, id2, factor) {
-        let OUI = document.getElementById(id1);
-        let NON = document.getElementById(id2);
-        if (OUI.checked) {
-            rép[factor] = "OUI";
-        } else if (NON.checked) {
-            rép[factor] = "NON";
+    // Tout patient avec fièvre et toux :
+    else if (resultat[0] == "Oui" && resultat[2] == "Oui") {
+        //Tout patient sans facteur pronostique
+        if (resultFacteurPronostique == 0) {
+            //Sans facteur de gravité ou au moins 1 facteur de gravité mineur sans facteur de gravité majeur
+            if (resultfacteurMajeur == 0 && resultfacteurMineur >= 1) {
+                messageFinal.innerText = messageAffiche[3];
+            }
+        } 
+        // Tout patient avec un facteur pronostique ou plus
+        else {
+            // Aucun facteur de gravité
+            if (resultfacteurMajeur == 0 && resultfacteurMineur <= 1) {
+                messageFinal.innerText = messageAffiche[3];
+            }
+            // Un seul facteur de gravité mineur ou Au moins deux facteurs de gravité mineurs 
+            else if (resultfacteurMajeur == 0 && resultfacteurMineur > 1) {
+                messageFinal.innerText = messageAffiche[2];
+            }
+        }
+        // Tout patient avec ou sans facteur pronostique avec au moins un facteur de gravité majeur
+        if (resultfacteurMajeur > 0) {
+            messageFinal.innerText = messageAffiche[2];
         }
     }
+    
 
-    var NextButt = document.getElementById("showNext");
-    var Q = document.querySelectorAll("Q");
-
-    NextButt.addEventListener("click", function () {
-
-      switch (Q) {
-        
-        case Q[1]:
-          choix('check1', 'check2', "fièvre");
-          break;
-
-        case Q[2]:
-          let temp = document.getElementById("temp");
-          if (temp.value !== "") {
-            rép.température = parseInt(temp.value);
-          }
-          break;
-        
-        case Q[3]:
-          choix('check3', 'check4', "toux");
-          break;
-
-        case Q[4]:
-          choix('check5', 'check6', "courbature");
-          break;
-
-        case Q[5]:
-          choix('check7', 'check8', "mal_gorge");
-          break;
-
-        case Q[6]:
-          choix('check9', 'check10', "diarrhée");
-          break;
-
-        case Q[7]:
-          choix('check11', 'check12', "fatigue");
-          break;
-
-        case Q[8]:
-          choix('check13', 'check14', "diff_alimentation");
-          break;
-
-        case Q[9]:
-          choix('check15', 'check16', "gêne_respiratoire");
-          break;
-
-        case Q[10]:
-          let BIEN = document.getElementById('check17');
-        let A_BIEN = document.getElementById('check18');
-        let MAL = document.getElementById('check19');
-        let T_MAL = document.getElementById('check20');
-        if (BIEN.checked) {
-            rép.sante = "BIEN";
+    // Tout patient avec un seul symptôme parmi fièvre, toux, mal de gorge, courbatures :
+    else if ( resultat[0] == "Oui" || resultat[2] == "Oui" || resultat[3] == "Oui" || resultat[4] == "Oui") {
+        // Pas de facteur de gravité
+        if (resultfacteurMajeur == 0 && resultfacteurMineur == 0) {
+            messageFinal.innerText = messageAffiche[4];
         }
-        if (A_BIEN.checked) {
-          rép.sante = "A_BIEN";
+        // Au moins un facteur de gravité ou un facteur pronostique :
+        else {
+            if (resultFacteurPronostique > 0) {
+                messageFinal.innerText = messageAffiche[4] + " " + messageAffiche[2];
+            }
         }
-        if (MAL.checked) {
-            rép.sante = "MAL";
-        }
-        if (T_MAL.checked) {
-            rép.sante = "T_MAL";
-        }
-          break;
+    } 
 
-        case Q[11]:
-          let poid = document.getElementById("poid");
-          if (poid.value !== "") {
-            rép.Poid = parseInt(poid.value);
-          }
-          break;
-        
-        case Q[12]:
-          let taille = document.getElementById("taille");
-          if (taille.value !== "") {
-            rép.Taille = parseInt(taille.value);
-          }
-          break;
 
-        case Q[13]:
-          choix('check21', 'check22', "maladie_cardiaque");
-          break;
+    // Tout patient avec aucun symptôme :
+    else if (resultSyptome == 0) {
+       messageFinal.innerText = messageAffiche[5];
+    } 
+    
 
-        case Q[14]:
-          choix('check23', 'check24', "diabétique");
-          break;
-
-        case Q[15]:
-          choix('check25', 'check26', "cancer");
-          break;
-
-        case Q[16]:
-          choix('check27', 'check28', "maladie_respiratoire");
-          break;
-
-        case Q[17]:
-          choix('check29', 'check30', "I_R_chronique_dialysée");
-          break;
-
-        case Q[18]:
-          choix('check31', 'check32', "MC_foie");
-          break;
-
-        case Q[19]:
-          choix('check33', 'check34', "enceinte");
-          break;
-
-        case Q[20]:
-          choix('check35', 'check36', "maladie_déf_immunitaire");
-          break;
-
-        case Q[21]:
-          choix('check37', 'check38', "trait_immunosuppresseur");
-          break;
-      
-        default:
-          break; 
-      }
-    }); 
-
-  };
-
+    // Age < 15 :
+    else if (resultat[10] < 15) {
+    messageFinal.innerText = messageAffiche[6];
+    }
+};
+// Table des questions à afficher pour le quiz /////////////////////////////
+const questions = [
+    '<p class="form__question"> Pensez-vous avoir ou avoir eu de la fièvre ces 10 derniers jours (frissons, sueurs) ? </p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question--c">Quelle est votre température corporelle ?</p> <div class="answer-inputs"><input type="number" name="Q2" id="degrés" min="34" max="42" placeholder="34 - 42"><span class="input-span">degrés</span></div>',
+    '<p class="form__question"> Ces derniers jours, avez-vous une toux ou une augmentation de votre toux habituelle ?</p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question"> Avez-vous eu des courbatures inhabituelles au cours des derniers jours ? </p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question"> Ces derniers jours, avez-vous un mal de gorge ? </p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question"> Ces dernières 24 heures, avez-vous de la diarrhée ? Avec au moins 3 selles molles. </p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question">Ces derniers jours, avez-vous une fatigue inhabituelle qui vous a obligé à vous reposer plus de la moitié de la journée ? </p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question">Avez-vous des difficultés importantes pour vous alimenter ou boire depuis plus de 24h ? </p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question"> Dans les dernières 24 heures, avez-vous noté un manque de souffle inhabituel lorsque vous parlez ou faites un petit effort ? </p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question--quatre">Actuellement, comment vous vous sentez ? </p><div class="answer-inputs"><div class="margine"> <input type="radio" name="Q10" id="Bien"><label for="Bien"><span>Bien</span> </label> </div><div><input type="radio" name="Q10" id="Assez bien"><label for="Assez bien"><span>Assez bien</span> </label> </div> <div> <input type="radio" name="Q10" id="Fatigué(e)">  <label for="Fatigué(e)">  <span>Fatigué(e)</span> </label>    </div>    <div>        <input type="radio" name="Q10" id="Très fatigué">      <label for="Très fatigué">      <span>Très fatigué</span> </label>  </div></div>',
+    '<p class="form__question--age">Quel est votre âge ? Ceci, afin de calculer un facteur de risque spécifique.</p><div  class="answer-inputs"> <input type="number" id="reponce1" placeholder="17 - 120" min="17" max="120"><span class="input-span">Age</span></div><br><br></br>',
+    '<p class="form__question--poids">Quel est votre poids ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.</p><div  class="answer-inputs"><input type="number" id="reponce1"  min="30" max= "200" placeholder="30 - 200"><span class="input-span">Kg</span></div><br><br></br>',
+    '<p class="form__question--taille">Quelle est votre taille ? Afin de calculer l’indice de masse corporelle qui est un facteur influençant le risque de complications de l’infection.</p> <div  class="answer-inputs"><input type="number" id="reponce1" min="100" max="260" placeholder="100 - 260"><span class="input-span">Cm</span></div><br><br></br>',
+    '<p class="form__question"> Avez-vous de l’hypertension artérielle mal équilibrée ? Ou avez-vous une maladie cardiaque ou vasculaire ? Ou prenez-vous un traitement à visée cardiologique ? </p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question">Êtes-vous diabétique ?</p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question">Avez-vous ou avez-vous eu un cancer ?</p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question">Avez-vous une maladie respiratoire ? Ou êtes-vous suivi par un pneumologue ?</p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question">Avez-vous une insuffisance rénale chronique dialysée ?</p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question">Avez-vous une maladie chronique du foie ?</p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question--trois">Êtes-vous enceinte ?</p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div><div><input type="radio" name="Q1" id="Homme" value ="Homme"><label for="Homme"><span>Homme</span> </label></div></div>',
+    '<p class="form__question">Avez-vous une maladie connue pour diminuer vos défenses immunitaires ?</p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+    '<p class="form__question">Prenez-vous un traitement immunosuppresseur ? C’est un traitement qui diminue vos défenses contre les infections. Voici quelques exemples : corticoïdes, méthotrexate, ciclosporine, tacrolimus, azathioprine, cyclophosphamide (liste non exhaustive).</p><div class="answer-inputs"><div class="margine"><input type="radio" name="Q1" id="Oui" value ="Oui"><label for="Oui"><span>Oui</span> </label></div><div><input type="radio" name="Q1" id="Non" value="Non"><label for="Non"><span>Non</span> </label></div></div>',
+  ];
   
-choix('check15', 'check16', "");
 
-//make time line incremant with question ++ using Js
+  // Table des messages à utiliser pour les resultats /////////////////////////////
+  messageAffiche = [
+    ` nous vous conseillons de rester à votre domicile et de contacter votre médecin en cas d’apparition de nouveaux symptômes. Vous pourrez aussi utiliser à nouveau l’application pour réévaluer vos symptômes. `,
+    `téléconsultation ou médecin généraliste ou visite à domicile  préciser “appelez le 141 si une gêne respiratoire ou des difficultés importantes pour s’alimenter ou boire pendant plus de 24h apparaissent.” 
+   `,
+    `appel 141 `,
+    ` téléconsultation ou médecin généraliste ou visite à domicile  `,
+    `Votre situation ne relève probablement pas du Covid-19. Consultez votre médecin au moindre doute`,
+    `Votre situation ne relève probablement pas du Covid-19. N’hésitez pas à contacter votre médecin en cas de doute. Vous pouvez refaire le test en cas de nouveau symptôme pour réévaluer la   situation.   Pour   toute information concernant   le   Covid-19 allez vers la page d’accueil. 
+   `,
+    ` Prenez contact avec votre médecin généraliste au moindre doute. Cette application n’est pour l’instant pas adaptée aux personnes de moins de 15 ans. En cas d’urgence, appeler le 15. `,
+  ];
+  
+
+
+// Variables //////////////////////////////////////////////////////
+const demarage = document.getElementById("demarer");
+let sect = document.querySelectorAll(".sect");
+let question = document.querySelector(".questions");
+const suivant = document.getElementById("suivant");
+const precedent = document.getElementById("precedent");
+const afficheResultat = document.getElementById("resultat");
+let progress = document.getElementById("file");
+let afficheNum = document.getElementById("afficheNum");
+let repeter = document.getElementById("repeter");
+var conter = 0;
+var resultat = [];
+let valeur = 1;
+
+
+// Fonction pour demarrer le test ////////////////////////////////
+demarage.addEventListener("click", () => {
+  //contoler l'afichage des sections par l'ajout/ supression de class avec la propriété css de display none
+  sect[0].classList.add("affiche");
+  sect[1].classList.remove("affiche");
+  //afficher la première question dans le tableau
+  question.innerHTML = questions[0];
+  inputs = document.querySelectorAll(".answer-inputs input");
+  //cacher le bouton precedent à la première question 
+  precedent.classList.add("affiche");
+  //desactiver le bouton tant que l'utilisateur n'a pas répondu à la première question 
+  suivant.setAttribute("disabled", "disabled");
+  //mettre le compte à 0 pour la barre du stepper 
+  progressBar(0);
+  //appel de la fonction qui permet de récuperer les réponses de l'utilisateur dès le debut du test 
+  recuperation();
+});
+
+
+// Fonction pour le stepper ProgresseBar //////////////////////////
+progressBar = (e) => {
+  progress.setAttribute("value", conter + 1);
+  afficheNum.innerHTML = e + 1 + "/" + questions.length;
+};
+
+
+///// Reglagie du bouton Suivant //////////////////////////////////
+suivant.addEventListener("click", (e) => {
+  //incrémenter le compte pour le stepper et le numéro
+  if (conter < questions.length - 1) {
+    valeur++;
+    conter++;
+  }
+  //aficher le bouton pour montrer le resultat à la dernière question
+  if (conter == questions.length - 1) {
+    suivant.classList.add("affiche");
+    afficheResultat.classList.remove("affiche");
+  }
+  //incrémenter le compte pour afficher les questions 1 par une après chaque click
+  question.innerHTML = questions[conter];
+  inputs = document.querySelectorAll(".answer-inputs input");
+  //aficher le bouton suivant
+  precedent.classList.remove("affiche");
+  suivant.setAttribute("disabled", "disabled");
+  progressBar(conter);
+  recuperation();
+  //empecher le click sur le bouton lien de rafraichir la page 
+  e.preventDefault();
+});
+
+
+// Reglage du bouton Precedent ////////////////////////////////////
+precedent.addEventListener("click", (e) => {
+  afficheResultat.classList.add("affiche");
+  suivant.classList.remove("affiche");
+  if (conter > 0) {
+    conter--;
+  }
+  if (conter == 0) {
+    precedent.classList.add("affiche");
+  }
+  question.innerHTML = questions[conter];
+  inputs = document.querySelectorAll(".answer-inputs input");
+  progressBar(conter);
+  recuperation();
+  e.preventDefault();
+});
+
+
+// Fonction pour recuperer les données de l'utilisateur ////////////
+recuperation = () => {
+  for (let i = 0; i < inputs.length; i++) {
+    //fonction pour changé les données collectés si l'utilisateur change sa réponse "change"
+    inputs[i].addEventListener("change", () => {
+      //pour les input de type text ou string
+      if (inputs.length == 1) {
+        resultat.splice(conter, 1, inputs[0].value);
+        suivant.removeAttribute("disabled");
+      } else {
+        //pour les inputs type radio button checked
+        if (inputs[i].checked == true) {
+          resultat.splice(conter, 1, inputs[i].value);
+          suivant.removeAttribute("disabled");
+        }
+      }
+    });
+  }
+};
+
+
+// Fonction pour afficher les resultats ////////////////////////////
+afficheResultat.addEventListener("click", (e) => {
+  sect[1].classList.add("affiche");
+  sect[2].classList.remove("affiche");
+  e.preventDefault();
+  //appliquer la fonction du tri des données de l'utilisateur 
+  trireponces();
+  //appliquer la fonction qui permet de compter le nombre de donnée des facteur dans l'algo
+  nombreDeFacteur();
+  //appliquer la fonction de l'algo
+  Algorithme();
+});
+
+
+// Fonction pour recommancer le test après que le resultat est affiché/
+repeter.addEventListener("click", (e) => {
+  sect[2].classList.add("affiche");
+  sect[1].classList.remove("affiche");
+  //mettre les comptes à 0
+  tabSymptome = [];
+  tabfacteurPronostique = [];
+  tabfacteurMineur = [];
+  tabfacteurMajeur = [];
+  resultSyptome = 0;
+  resultFacteurPronostique = 0;
+  resultfacteurMineur = 0;
+  resultfacteurMajeur = 0;
+  conter = 0;
+  valeur = 1;
+  suivant.classList.remove("affiche");
+  precedent.classList.add("affiche");
+  afficheResultat.classList.add("affiche");
+  question.innerHTML = questions[0];
+  inputs = document.querySelectorAll(".answer-inputs input");
+  progressBar(conter);
+  recuperation();
+  e.preventDefault();
+});
+
